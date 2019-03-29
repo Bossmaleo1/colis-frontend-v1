@@ -1,0 +1,221 @@
+<mat-toolbar color="primary" class="block-toolbar1" *ngIf="!afficher_spinner">
+
+  <div matRipple class="icon-block" (click)="OnProfil()"><img  id="icon" src="http://localhost/colis_others/photo_de_profil/photo.jpg"/></div>
+
+  <button mat-button (click)="OnProfil()"><span>Sidney MALEO</span></button><br/>
+
+  <span class="example-spacer"></span>
+
+  <button mat-button><mat-icon id="icon-color">search</mat-icon><span>Rechercher</span></button>
+
+  <button mat-icon-button (click)="OnclickNotification()" >
+    <mat-icon matBadgeHidden="{{badgeshidden}}" matBadge="{{badgetaille}}" matBadgeColor="warn">notifications</mat-icon>
+  </button>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="OnProfil()">
+      <mat-icon id="icon-color">account_circle</mat-icon>
+      <span>Profil</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon id="icon-color">settings</mat-icon>
+      <span>Parametres</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon id="icon-color">help</mat-icon>
+      <span>A propos</span>
+    </button>
+    <button mat-menu-item  (click)="OnDeconnect()">
+      <mat-icon id="icon-color">power_settings_new</mat-icon>
+      <span>Deconnexion</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<section>
+
+
+  <br/><br/><br/><br/>
+
+  <mat-card class="example-card">
+
+    <mat-card-actions>
+
+      <br/><br/><br/><br/>
+
+      <mat-divider></mat-divider>
+      <mat-card class="example-card3">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url('+user_photo+')'}" ></div>
+          <mat-card-title>Sidney MALEO</mat-card-title>
+          <mat-card-subtitle>il y a 4h</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <br/>
+          <p><mat-icon>domain</mat-icon> Ville de depart : Paris (ROISSY CHARLES DE GAULLE)</p>
+          <p><mat-icon>domain</mat-icon> Ville d'arrivee : Brazzaville (MAYA MAYA)</p>
+          <p><mat-icon>flight_takeoff</mat-icon> Heure de depart : 11h30min</p>
+          <p><mat-icon>flight_land</mat-icon> Heure d'arrivee : 18h40min</p>
+          <p><mat-icon>local_parking</mat-icon> Nombre de Kilos : 10 Kg</p>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-actions>
+          <button mat-button><mat-icon id="icon-color">check_circle</mat-icon><span>Reserver</span></button>
+        </mat-card-actions>
+
+      </mat-card>
+
+      <br/><br/><br/>
+      <mat-card class="example-card3">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url('+user_photo+')'}" ></div>
+          <mat-card-title>Sidney MALEO</mat-card-title>
+          <mat-card-subtitle>il y a 4h</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <br/>
+          <p><mat-icon>domain</mat-icon> Ville de depart : Paris (ROISSY CHARLES DE GAULLE)</p>
+          <p><mat-icon>domain</mat-icon> Ville d'arrivee : Brazzaville (MAYA MAYA)</p>
+          <p><mat-icon>flight_takeoff</mat-icon> Heure de depart : 11h30min</p>
+          <p><mat-icon>flight_land</mat-icon> Heure d'arrivee : 18h40min</p>
+          <p><mat-icon>local_parking</mat-icon> Nombre de Kilos : 10 Kg</p>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-actions>
+          <button mat-button><mat-icon id="icon-color">check_circle</mat-icon><span>Reserver</span></button>
+        </mat-card-actions>
+
+      </mat-card>
+
+      <br/><br/><br/>
+      <mat-card class="example-card3">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url('+user_photo+')'}" ></div>
+          <mat-card-title>Sidney MALEO</mat-card-title>
+          <mat-card-subtitle>il y a 4h</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <br/>
+          <p><mat-icon>domain</mat-icon> Ville de depart : Paris (ROISSY CHARLES DE GAULLE)</p>
+          <p><mat-icon>domain</mat-icon> Ville d'arrivee : Brazzaville (MAYA MAYA)</p>
+          <p><mat-icon>flight_takeoff</mat-icon> Heure de depart : 11h30min</p>
+          <p><mat-icon>flight_land</mat-icon> Heure d'arrivee : 18h40min</p>
+          <p><mat-icon>local_parking</mat-icon> Nombre de Kilos : 10 Kg</p>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-actions>
+          <button mat-button><mat-icon id="icon-color">check_circle</mat-icon><span>Reserver</span></button>
+        </mat-card-actions>
+
+      </mat-card>
+      <br/><br/><br/>
+      <mat-card class="example-card3">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url('+user_photo+')'}" ></div>
+          <mat-card-title>Sidney MALEO</mat-card-title>
+          <mat-card-subtitle>il y a 4h</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <br/>
+          <p><mat-icon>domain</mat-icon> Ville de depart : Paris (ROISSY CHARLES DE GAULLE)</p>
+          <p><mat-icon>domain</mat-icon> Ville d'arrivee : Brazzaville (MAYA MAYA)</p>
+          <p><mat-icon>flight_takeoff</mat-icon> Heure de depart : 11h30min</p>
+          <p><mat-icon>flight_land</mat-icon> Heure d'arrivee : 18h40min</p>
+          <p><mat-icon>local_parking</mat-icon> Nombre de Kilos : 10 Kg</p>
+        </mat-card-content>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-actions>
+          <button mat-button><mat-icon id="icon-color">check_circle</mat-icon><span>Reserver</span></button>
+        </mat-card-actions>
+
+      </mat-card>
+
+
+
+    </mat-card-actions>
+
+    <mat-paginator  [length]="length"
+                    [pageSize]="pageSize"
+                    [pageSizeOptions]="pageSizeOptions"
+                    (page)="changePage($event)">
+    </mat-paginator>
+  </mat-card> <br/>
+
+</section>
+
+
+<!--Mon FAB -->
+<button mat-fab class="myfloattingbutton" color="primary" (click)="onDialogDisplayDialog()">
+  <mat-icon >edit</mat-icon>
+</button>
+
+
+
+<!--Boîte de dialogue sur les saisies de la journée  -->
+<div class="dialgo-block" [ngStyle]="{'display':''+block_boite_de_dialogue+''}">
+  <mat-card class="example-card1">
+
+    <button mat-icon-button class="close-user-button" (click)="onCloseDialog()" >
+      <mat-icon aria-label="Example icon-button with a heart icon">close</mat-icon>
+    </button>
+
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-divider></mat-divider>
+      <div class="connexion-form">
+        <mat-divider></mat-divider>
+        <br/>
+        <form>
+
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Ville de depart" autocomplete="off">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Ville d'arrivee" autocomplete="off">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Heure de depart" autocomplete="off">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Heure d'arrivee" autocomplete="off">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Nombre de Kilos" autocomplete="off" type="number">
+          </mat-form-field>
+          <br/>
+          <button mat-raised-button color="primary" class="example-full-width" type='submit'>PUBLIER</button>
+        </form>
+        <br/>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-card-content>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-actions>
+      <div class="connexion-form">
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

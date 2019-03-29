@@ -1,0 +1,21 @@
+<div id='block_spinner'><mat-spinner *ngIf="afficher_spinner"  class="progressbar"></mat-spinner></div>
+
+<mat-toolbar color="primary" class="block-toolbar" *ngIf="!afficher_spinner">
+
+  <span>Photo de Profil</span>
+
+  <span class="example-spacer"></span>
+
+  <button mat-button (click)="onNext()">Suivant</button>
+
+</mat-toolbar>
+
+
+<br/><br/>
+<mat-card class="example-card" *ngIf="!afficher_spinner">
+
+  <app-add-profil-picture
+  >
+  </app-add-profil-picture>
+
+</mat-card> <br/>
