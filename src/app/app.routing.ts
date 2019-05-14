@@ -16,19 +16,20 @@ import { ExpedierComponent } from './expedier/expedier.component';
 import {DetailAnnonceComponent } from './detail-annonce/detail-annonce.component';
 
 
+
 const routes: Routes =[
-    { path: 'home', component: HomeComponent },
-    // { path: 'user-profile',     component: ProfileComponent,canActivate:[AuthGaurdService]  },
-    { path: 'user-profile', component: ProfileComponent },
-    { path: 'register', component: SignupComponent  },
-    { path: 'landing', component: LandingComponent  },
-    { path: 'login', component: LoginComponent  },
+    { path: 'home',             component: HomeComponent },
+    { path: 'user-profile',     component: ProfileComponent,canActivate:[AuthGaurdService]  },
+    { path: 'register',           component: SignupComponent  },
+    { path: 'landing',          component: LandingComponent,canActivate:[AuthGaurdService]  },
+    { path: 'login',          component: LoginComponent  },
     { path: 'logout', component: LogoutComponent,canActivate:[AuthGaurdService]  },
-    { path: 'transport', component: TransportComponent  },
+	{ path: 'transport', component: TransportComponent  },
     { path: 'liste-annonce', component: ListeAnnonceComponent  },
     { path: 'detail-annonce', component: DetailAnnonceComponent  },
     { path: 'expedier', component:ExpedierComponent  },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
+	
 ];
 
 @NgModule({
@@ -41,3 +42,4 @@ const routes: Routes =[
   ],
 })
 export class AppRoutingModule { }
+

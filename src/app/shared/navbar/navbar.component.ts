@@ -1,7 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Location, PopStateEvent } from '@angular/common';
 import { AuthenticationService } from '../../service/authetification.service';
+//import { Component, OnInit } from '@angular/core';
+import { first } from 'rxjs/operators';
+
+import { User } from '../../_models';
+import { UserService} from '../../service/';
 
 @Component({
     selector: 'app-navbar',
@@ -14,11 +19,14 @@ export class NavbarComponent implements OnInit {
     private yScrollStack: number[] = [];
 
     isUserLoggedIn:boolean = false;
+    users: any[];
 
-    constructor(public location: Location, private router: Router,private loginService:AuthenticationService) {
+    constructor(public location: Location, private router: Router,private loginService:AuthenticationService,private userService: UserService) {
     }
 
     ngOnInit() {
+        this.users = JSON.parse(localStorage.getItem('currentUser'));
+        console.log(this.users)
         this.isUserLoggedIn=this.loginService.isUserLoggedIn();
       this.router.events.subscribe((event) => {
         this.isCollapsed = true;
@@ -36,6 +44,9 @@ export class NavbarComponent implements OnInit {
      this.location.subscribe((ev:PopStateEvent) => {
          this.lastPoppedUrl = ev.url;
      });
+     this.userService.getAll().pipe(first()).subscribe(users => {
+        this.users = users;
+    });
     }
 
     isHome() {
