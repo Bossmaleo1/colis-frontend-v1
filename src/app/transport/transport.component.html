@@ -1,0 +1,220 @@
+<main>
+    <section class="section section-shaped section-lg bg">
+      <div class="">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="container pt-lg-md">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="card bg-secondary shadow border-0">
+              <div class="card-header bg-white pb-12">
+                  <h3 class="h4 text-success text-center font-weight-bold mb-4">Publier une annonce</h3>
+                  <div class=" text-center mb-3">
+                    <small class="text font-weight-bold">Vous partez en voyage et vous souhaitez transporter un colis, publier votre annonce en remplissant ce formulaire. C'est parti!</small>
+                  </div>
+      
+              </div>
+              <div class="card-body px-lg-5 py-lg-5">
+                <!-- <div class="text-center text-muted mb-4">
+                  <small>Ou renseigner vos informations</small>
+                </div> -->
+                <form role="form">
+                  <div class='row'>
+                      <!-- <div class="col-md-12">
+                        <small class="d-block text-uppercase font-weight-bold mb-3">Numéro de vol</small>
+                        <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Nom" type="text" (focus)="focus=true" (blur)="focus=false">
+                          </div>
+                        </div>
+                      </div> -->
+                      
+                  </div>
+                  <div class='row'>
+                      <div class="col-md-6">
+                        <small class="d-block text-uppercase font-weight-bold mb-3">D’où partez-vous ?</small>
+                        <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-plane-departure"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Départ" type="text" (focus)="focus=true" (blur)="focus=false">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <small class="d-block text-uppercase font-weight-bold mb-3">Où allez-vous ?</small>
+                        <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-plane-arrival"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Destination" type="email" (focus)="focus1=true" (blur)="focus1=false">                        
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-4">
+                          <small class="d-block text-uppercase font-weight-bold mb-3">Date de départ</small>
+                          <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                                </div>
+                                <input class="form-control datepicker" placeholder="Select date" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus2=true" (blur)="focus2=false" type="text" (select)="onDateSelection($event)" autocomplete="off"/>
+                              </div>
+                            </div>
+                      </div>
+                     
+                      <div class="col-md-2 mt-4 mt-md-0">
+                          <small class="d-block text-uppercase font-weight-bold mb-3">Heure de départ</small>
+                          <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                              </div>
+                              <input class="form-control" placeholder="" type="time" (focus)="focus=true" (blur)="focus=false">
+                            </div>
+                          </div>
+                      </div>
+                      
+                      <div class="col">
+                          <small class="d-block text-uppercase font-weight-bold mb-3">Date d'arrivée</small>
+                          <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                              </div>
+                              <input class="form-control datepicker" placeholder="Select date" name="dp1" [(ngModel)]="model1" ngbDatepicker #d1="ngbDatepicker" (click)="d1.toggle()" (focus)="focus2=true" (blur)="focus2=false" type="text" (select)="onDateSelection($event)" autocomplete="off"/>
+                            </div>
+                          </div>
+                          <!-- <ng-template #t let-date let-focused="focused" >
+                              <span class="custom-day"
+                               [class.text-white]="isActive(date)"
+                               [class.range-end]="isRangeEnd(date)"
+                               [class.range-start]="isRangeStart(date)"
+                               [class.btn-light]="isActive(date)"
+                               [class.bg-primary]="isActive(date)"
+                               [class.range]="isInRange(date)"
+                               [class.faded]="isInRange(date)"
+                              >
+                                {{ date.day }}
+                              </span>
+                            </ng-template> -->
+                      </div>
+                      <div class="col-md-2 mt-4 mt-md-0">
+                          <small class="d-block text-uppercase font-weight-bold mb-3">Heure d'arrivée</small>
+                          <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                              </div>
+                              <input class="form-control" placeholder="" type="time" (focus)="focus=true" (blur)="focus=false">
+                            </div>
+                          </div>
+                      </div>
+                     
+
+                  </div>
+                  <div class='row'>
+                      <div class="col-md-6">
+                        <small class="d-block text-uppercase font-weight-bold mb-3">Prix du Kg</small>
+                        <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-euro-sign"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Prix/Kg" type="text" (focus)="focus=true" (blur)="focus=false">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <small class="d-block text-uppercase font-weight-bold mb-3">Nombre de kilos maximum (en kg)</small>
+                        <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-balance-scale"></i></span>
+                            </div>
+                          
+                             <input class="form-control" placeholder="23 Kg" type="email" (focus)="focus1=true" (blur)="focus1=false">                         
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <br>
+                  <small class="lead text-muted">Rendez-vous pour recuperer le colis</small>
+                  <hr>
+                  <div class='row'>
+                      <div class="col-md-6">
+                        <small class="d-block text-uppercase font-weight-bold mb-3">Lieu du rendez-vous de départ</small>
+                        <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Départ" type="text" (focus)="focus=true" (blur)="focus=false">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <small class="d-block text-uppercase font-weight-bold mb-3">Lieu du rendez-vous d'arrivée</small>
+                        <div class="form-group" [ngClass]="{'focused':focus2===true}">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                            </div>
+                            <input class="form-control" placeholder="Arrivée" type="email" (focus)="focus1=true" (blur)="focus1=false">                        
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                    
+<!--                   
+                  <div class="row my-4">
+                    <div class="col-12">
+                      <div class="custom-control custom-control-alternative custom-checkbox">
+                        <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                        <label class="custom-control-label" for="customCheckRegister">
+                          <span>J'accepte les 
+                            <a href="javascript:void(0)">Conditions d'utilisations</a>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <button type="button" class="btn btn-lg btn-success btn-block">Publier</button>
+                  <button type="button" class="btn btn-lg  btn-danger btn-block">Annuler</button> -->
+                  <div class="text-center">
+                    <div class="row">
+                      <div class="col-md-6">
+                          <button type="button" class="btn btn-lg btn-success btn-block">Publier</button>
+                      </div>
+                      <div class="col-md-6">
+                          <button type="button" class="btn btn-lg  btn-danger btn-block">Annuler</button>
+                      </div>
+
+                    </div>
+                   
+                   
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  

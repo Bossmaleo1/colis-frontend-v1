@@ -1,4 +1,0 @@
-+ @angular/animations@6.1.10
-updated 1 package and audited 40665 packages in 20.351s
-found 6 vulnerabilities (2 low, 4 moderate)
-  run `npm audit fix` to fix them, or `npm audit` for details
