@@ -25,7 +25,7 @@
                 <!-- <div class="text-center text-muted mb-4">
                   <small>Ou renseigner vos informations</small>
                 </div> -->
-                <form role="form" method="POST">
+                <form role="form" >
                   <div class='row'>  
                   </div>
                   <div class='row'>
@@ -36,7 +36,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
                             </div>
-                            <input class="form-control" placeholder="Départ" type="text" (focus)="focus=true" (blur)="focus=false">
+                            <input class="form-control" placeholder="Départ" type="text" (focus)="focus=true" (blur)="focus=false" name="aerop_dep" [(ngModel)]="aerop_dep">
                           </div>
                         </div>
                       </div>
@@ -47,7 +47,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
                             </div>
-                            <input class="form-control" placeholder="Destination" type="email" (focus)="focus1=true" (blur)="focus1=false">                        
+                            <input class="form-control" placeholder="Destination" type="email" (focus)="focus1=true" (blur)="focus1=false" name="aerop_arr" [(ngModel)]="aerop_arr">                        
                           </div>
                         </div>
                       </div>
@@ -60,7 +60,7 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                                 </div>
-                                <input class="form-control datepicker" placeholder="Select date" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus2=true" (blur)="focus2=false" type="text" (select)="onDateSelection($event)" autocomplete="off"/>
+                                <input class="form-control datepicker" placeholder="Select date" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (focus)="focus2=true" (blur)="focus2=false" type="text" (select)="onDateSelection($event)" autocomplete="off" name="date_vol" [(ngModel)]="date_vol"/>
                               </div>
                             </div>
                       </div>
@@ -107,10 +107,11 @@
                   <div class="text-center">
                     <div class="row">
                       <div class="col-md-12">
-                          <button class="btn btn-icon btn-3 btn-info btn-block" type="submit" [routerLink]="['/liste-annonce']">
+                          <button class="btn btn-icon btn-3 btn-info btn-block" type="submit" (click)=search_ann()>
                               <span class="btn-inner--icon"><i class="fas fa-search"></i></span>
                               <span class="btn-inner--text">Chercher</span>
                           </button>
+                          
                       </div>
                      
                     </div>

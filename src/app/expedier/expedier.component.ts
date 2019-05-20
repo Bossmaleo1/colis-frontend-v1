@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AnnonceService} from '../service/annonce.service';
 
 @Component({
     selector: 'app-expedier',
@@ -7,11 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ExpedierComponent implements OnInit {
-  focus: any;
-  focus1: any;
+ aerop_dep=this.aerop_dep;
+ aerop_arr=this.aerop_arr;
+ date_vol=this.date_vol;
 
-  constructor() { }
+  constructor(   private router: Router,
+    private listeservice: AnnonceService) {
+ }
 
   ngOnInit() {}
+  search_ann() {
+    this.listeservice.search(this.aerop_dep, this.aerop_arr,this.date_vol)
+    this.router.navigate(['/liste-annonce'])
+    /*) {
+      this.router.navigate([''])
+      this.invalidLogin = false
+    } else
+      this.invalidLogin = true*/
+  }
 
 }
